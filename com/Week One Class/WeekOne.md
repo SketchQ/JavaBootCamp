@@ -1,6 +1,6 @@
 # İlk Hafta
 
-* Java'da Hello World yazılımı
+## Java'da Hello World yazılımı
 
 ```java
 public class Main{
@@ -10,7 +10,7 @@ public class Main{
 }
 ```
 
-* **Variable, DataTypes, Operators and Shortcut Operators**
+## **Variable, DataTypes, Operators and Shortcut Operators**
 
 ```java
 public class MainDataTypes {
@@ -94,7 +94,7 @@ public class MainDataTypes {
 
 ```
 
-* **Scanner sınıfı** ve input alma
+### **Scanner sınıfı** ve input alma
 
 ```java
 import java.util.Scanner;
@@ -106,7 +106,7 @@ input.nextLine();
 //etc...
 ```
 
-* Karar mekanizmaları **(if,else,switch)** ve Logical Operators (and or not exclusive to)
+## Karar mekanizmaları **(if,else,switch)** ve Logical Operators (and or not exclusive to)
 
 ```java
 import java.util.Scanner;
@@ -220,19 +220,19 @@ public class MainIf {
         System.out.println("Please age: ");
         int x = in.nextInt();
 
+        
+    }
+}
+```
+
+```java
+
         /* Örnek yapalım
          * Kullanıcıdan 2 sayı alalım çarpımları
          * 10 - 100 arasıdaysa 5 puan
          * 100 den büyükse 10
          * bunların dışında 0 puan
          */
-    }
-}
-```
-
-## Örnek
-
-```java
 import java.util.Scanner;
 
 public class WeekOne {
@@ -257,42 +257,163 @@ public class WeekOne {
 }
 ```
 
-Loop ve Döngüler
+## Loop ve Döngüler
 
 ```java
 import java.util.Scanner;
 
-public class WeekOne {
+public class MainLoop {
     public static void main(String[] args) {
-        int x = 0, y = 0, point = 0;
-        Scanner input = new Scanner(System.in);
-        while (x != -1 || y != -1) {
+        /* Döngüler (Loops)
+         * while loop
+         * do-while loop
+         * for loop
+         */
 
-            System.out.print("Lütfen ilk sayıyı Giriniz: ");
-            x = input.nextInt();
-            System.out.print("Lütfen ikinci Sayıyı Giriniz: ");
-            y = input.nextInt();
-            input.close();
+       int count = 0;
+        while (count < 10) {
+            System.out.println("Count: " + count);
+           count+=2;
+      }
 
-            int z = (x * y);
+        System.out.println("-----");
 
-            if (z >= 10 && z <= 100) {
+        count = 0;
+        do {
+            System.out.println("Count: " + count);
+            count+=2;
+        } while (count < 10);
+
+        System.out.println("-----");
+
+        for (int i = 0; i < 10; i+=2) {
+            System.out.println("Count: " + i);
+        }
+
+        /* Örnek yapalım
+         * Kullanıcıdan 2 sayı alalım çarpımları
+         * 10 - 100 arasıdaysa 5 puan
+         * 100 den büyükse 10
+         * bunların dışında 0 puan
+         * Kullanıcı -1 girerse bitirelim
+         */
+
+        Scanner in = new Scanner(System.in);
+
+        int num1 = 0, num2 = 0, point = 0;
+        while (num1 != -1 || num2 != -1) {
+            System.out.println("Please Number 1: ");
+            num1 = in.nextInt();
+            System.out.println("Please Number 2: ");
+            num2 = in.nextInt();
+
+            int result = num1 * num2;
+
+            if (result >= 10 && result <= 100) {
                 point += 5;
-                System.out.println("Result: " + z + " Puan: " + point);
-            } else if (z > 100) {
+                System.out.println("Result: " + result + " Puan:" + 5 + " Total Puan: " + point);
+            } else if (result > 100) {
                 point += 10;
-                System.out.println("Result: " + z + " Puan: " + point);
+                System.out.println("Result: " + result + " Puan:" + 10 + " Total Puan: " + point);
             } else {
-                System.out.println("Result: " + z + " Puan: " + point);
+                System.out.println("Result: " + result + " Puan:" + 0 + " Total Puan: " + point);
             }
         }
+
     }
 }
+
 ```
 
-Strings
+## Strings
 
-Arrays
+```java
+import java.util.Scanner;
+
+public class MainString {
+    public static void main(String[] args) {
+        /* String */
+        char c = 'a';
+        String m;
+        m = "Hello world";
+        System.out.println(m);
+
+        String n, p;
+        int x = 10;
+        n = "Hello" + " " + "World";
+        p = n + x;
+
+        System.out.println(n);
+        System.out.println(p);
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Sayı giriniz:");
+        String input = in.nextLine();
+
+
+        System.out.println("Input: " + input);
+        int num = Integer.parseInt(input);
+        System.out.println(num);
+
+        /* Örnek: Ekrana aşağıdaki şekli yazdıralım
+         * + + +
+         * + + +
+         * + + +
+         */
+
+        int i, j;
+        i = 1;
+        while (i <= 3) {
+            j = 1;
+            while (j <= 3) {
+                System.out.print("+ ");
+                j++;
+            }
+            System.out.println();
+            i++;
+        }
+
+        for (int i = 1; i <= 3; i++) {
+            for (int j = 1; j <= 3; j++) {
+                System.out.print("+ ");
+            }
+            System.out.println();
+        }
+
+        String s1, s2, s3, s4;
+        s1 = "Ali";
+        s2 = new String("Welcome");
+        s1 = new String("Veli");
+        s3 = "Veli";
+        s4 = "veli";
+
+
+        System.out.println(s1.equals(s3));
+        System.out.println(s1.equals(s4));
+        System.out.println(s1.equalsIgnoreCase(s4));
+
+        s4 = s2 + s1;
+        System.out.println(s4);
+
+        s4 = s2.concat(s1);
+        System.out.println(s4);
+
+        for (int i = 0; i < s1.length(); i++) {
+            System.out.println(s1.charAt(i));
+        }
+
+
+        int num1=5;
+        int num2=2;
+        MainMethod.multiply(num1,num2);
+        MainMethod mainMethod = new MainMethod();
+        mainMethod.multiply2(num1,num2);
+    }
+}
+
+```
+
+## Arrays
 
 ```java
 int[] numbers = new int[3]; // [0][1][2]
