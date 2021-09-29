@@ -416,71 +416,96 @@ public class MainString {
 ## Arrays
 
 ```java
-int[] numbers = new int[3]; // [0][1][2]
-numbers[0] = 1;
-numbers[1] = 2;
-numbers[3] = 3;
+import java.util.Arrays;
 
-for(int i = 0; i < numbers.lenght; i++){
-    System.out.println(numbers[i] + " " );
-}
+public class MainArray {
+    public static void main(String[] args) {
 
-double[] doubles= {1.0,2.5};
 
-for(double d : doubles){ // For Each loop
-    System.out.print(d + " " );
-}
-// Aşağıdaki gibi arrays itemlar yazılabilir.
-System.out.println(Arrays.toString(doubles));
+        int[] numbers = new int[3]; // [0][1][2]
+        numbers[0] = 1;
+        numbers[1] = 2;
+        numbers[2] = 3;
 
-```
 
-Matriks (2 boyutlu listeler)
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
 
-```java
-int[][] matrice = new int[2][3];
-matrice[0][0] = 1;
-matrice[0][1] = 2;
-matrice[0][2] = 3;
-matrice[1][0] = 4;
-matrice[1][1] = 5;
-matrice[1][2] = 6;
+        double[] doubles = {1.0, 2.5};
+        for (int i = 0; i < doubles.length; i++) {
+            System.out.print(doubles[i] + " ");
+        }
 
-for(int i = 0; i < matrice.lenght ; i++){
-    for(int j = 0; j < matrice.length ; j++){
-        System.out.print(matrice[i][j] + " " );
+        System.out.println();
+        for (double d : doubles) {
+            System.out.print(d + " ");
+        }
+
+        System.out.println();
+        System.out.println(Arrays.toString(doubles));
+
+        for (double d :
+                doubles) {
+            System.out.println(d);
+        }
+
+        /*
+         [1][2]  indices    0 1 2
+                          0 [1][2][3]
+         [3][4]           1 [4][5][6]
+                          0x1 [0,0]
+                          0x2 [0,1]
+                          0x3 [0,2]
+                          0x4 [1,0]
+                          0x5 [1,1]
+                          0x6 [1,2]
+         */
+
+        int[][] matrice = new int[2][3];
+        matrice[0][0] = 1;
+        matrice[0][1] = 2;
+        matrice[0][2] = 3;
+        matrice[1][0] = 4;
+        matrice[1][1] = 5;
+        matrice[1][2] = 6;
+
+        matrice = new int[3][3];
+
+        for (int i = 0; i < matrice.length; i++) {
+            for (int j = 0; j < matrice[i].length; j++) {
+                System.out.print(matrice[i][j] + " ");
+            }
+            System.out.println();
+        }
+
     }
-    System.out.println();
 }
 ```
 
-Dates
-
-* Local Date-Time-Datetime
+## Dates, Local Dates, ZonedDateTime
 
 ```java
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
-public class WeekOne {
+public class MainDate {
     public static void main(String[] args) {
         Date date = new Date();
         System.out.println(date);
 
-        // Java 8
+
+        /* Java 8 */
         LocalDate localDate = LocalDate.now();
         System.out.println(localDate);
 
-        LocalDate specialDate = LocalDate.of(2021, 12,12);
+        LocalDate specialDate = LocalDate.of(2021, 12, 30);
         System.out.println(specialDate);
-        LocalDate plusDays = specialDate.plusDays(-2);
+        LocalDate plusDays = specialDate.plusDays(2);
         System.out.println(plusDays);
-        System.out.println(specialDate); 
 
-        // Local Time
+        /* LocalTime */
         LocalTime localTime = LocalTime.now();
         System.out.println(localTime);
 
@@ -488,33 +513,35 @@ public class WeekOne {
         System.out.println(specialTime);
 
         System.out.println(localTime.isAfter(specialTime));
-        LocalTime plusTime =  specialTime.plus(1, ChronoUnit.HOURS);
+        LocalTime plusTime = specialTime.plus(1, ChronoUnit.HOURS);
         System.out.println(plusTime);
         System.out.println(specialTime);
 
-        //Local DateTime
+        /* LocalDateTime */
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println(localDateTime);
-    }
-}
-```
 
-* ZonedDateTime
+        LocalDateTime specialDateTime = LocalDateTime.of(specialDate, specialTime);
+        System.out.println(specialDateTime);
 
-```java
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+        /* ZonedDateTime */
+        ZonedDateTime zonedDateTime = ZonedDateTime.now();
+        System.out.println(zonedDateTime);
 
-public class WeekOne {
-    public static void main(String[] args) {
-        //Zone Date Time
-        ZonedDateTime zoneDateTime = ZonedDateTime.now();
-        System.out.println(zoneDateTime);
-
-        ZoneId zoneID = ZoneId.of("Europe / Istanbul");
-        ZonedDateTime specialZonedDateTime = ZonedDateTime.of(specialDateTime, ZoneId);
+        ZoneId zoneId = ZoneId.of("Europe/Istanbul");
+        ZonedDateTime dateTime = ZonedDateTime.of(2021, 9, 21, 12, 30, 20, 11, zoneId);
+        ZonedDateTime specialZonedDateTime = ZonedDateTime.of(specialDateTime, zoneId);
         System.out.println(specialZonedDateTime);
 
+
+
+        /* Period */
+        long between = ChronoUnit.DAYS.between(localDateTime, specialDateTime);
+        System.out.println(between);
+
+        LocalDate initial = LocalDate.now();
+        System.out.println(initial);
+        System.out.println(initial.plus(Period.ofDays(5)));
     }
 }
 ```
