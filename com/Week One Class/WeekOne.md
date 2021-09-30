@@ -5,7 +5,7 @@
 ```java
 public class Main{
     public static void main(Strings[] args){
-        System.outprintln("Hello World!");
+        System.out.println("Hello World!");
     }
 }
 ```
@@ -50,8 +50,10 @@ public class MainDataTypes {
         x = 5;
         x = 7;
 
+        // final keyword variable'in degitirelemez olmasini belirtir.
+
         final int y = 1;
-        //        y=5; //hatalı
+        y=5; //hatalı olucak final keyworddan oturu
 
         /* Matematiksel Operatorler:
          * + Toplama
@@ -63,7 +65,7 @@ public class MainDataTypes {
 
         double fah, cel;
         fah = 300;
-        cel = 5 / 9.0 * (fah - 32);
+        cel = 5 / 9.0 * (fah - 32); // 9.0 kullanmamizin sebebi bolumde double sonuc alabilmek icin
         System.out.println(fah + " fahreheit is " + cel + " celsius");
 
         double tam = 5 / 2.0;
@@ -84,9 +86,9 @@ public class MainDataTypes {
 
         int count = 0;
         count += 8;
-
-        System.out.println(++count);
-        System.out.println(count++);
+        // once variable kullanip sonra artirilir yada vice versa
+        System.out.println(++count); // bu 9 dur
+        System.out.println(count++); // bu 8 dir
 
     }
 }
@@ -165,16 +167,20 @@ public class MainIf {
          */
 
         if (f >= 300 && f < 500) {
-            System.out.println("300<=f<500");
+            System.out.println("300 ile 500 arasinda");
         } else if (f == 500 || f == 600) {
             System.out.println("500 yada 600");
         }
+        // Kod buradan devam edecektir. Else kosulu yok
         System.out.println("Koşullar bitti");
 
+        // Switch case
 
         Scanner in = new Scanner(System.in);
         System.out.println("Please age: ");
         int age = in.nextInt();
+
+        // Switch case kullanirken break komutunu kullanmayi unutma!!
 
         switch (age) {
             case 10:
@@ -210,29 +216,22 @@ public class MainIf {
 
         System.out.println(y);
 
+        // ? Statement can be used instead of if...
+        // Same example as above
+
         z = (x >= 0) ? 1 : -1; //variable = (statement) ? true:false
         c = (x >= 0) ? 'b' : 'd'; //variable = (statement) ? true:false
 
         System.out.println("Z:" + z);
         System.out.println("C:" + c);
-
-        Scanner in = new Scanner(System.in);
-        System.out.println("Please age: ");
-        int x = in.nextInt();
-
-        
     }
 }
-```
-
-```java
-
-        /* Örnek yapalım
-         * Kullanıcıdan 2 sayı alalım çarpımları
-         * 10 - 100 arasıdaysa 5 puan
-         * 100 den büyükse 10
-         * bunların dışında 0 puan
-         */
+/* Örnek yapalım
+* Kullanıcıdan 2 sayı alalım çarpımları
+* 10 - 100 arasıdaysa 5 puan
+* 100 den büyükse 10
+* bunların dışında 0 puan
+*/
 import java.util.Scanner;
 
 public class WeekOne {
