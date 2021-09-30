@@ -270,12 +270,19 @@ public class MainLoop {
          */
 
        int count = 0;
+
+       while(count < 100){
+           System.out.println("Count is : " + count++); // 100 dahile kadar sayar.
+           System.out.println("Count is : " + count++); // 99 dahile kadar sayar.
+       }
         while (count < 10) {
             System.out.println("Count: " + count);
            count+=2;
       }
 
         System.out.println("-----");
+        
+        // do - while dongusu
 
         count = 0;
         do {
@@ -284,6 +291,8 @@ public class MainLoop {
         } while (count < 10);
 
         System.out.println("-----");
+
+        // for dongusu
 
         for (int i = 0; i < 10; i+=2) {
             System.out.println("Count: " + i);
