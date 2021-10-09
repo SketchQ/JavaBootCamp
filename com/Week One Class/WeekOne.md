@@ -627,7 +627,7 @@ public class MainMethod {
 
 ```
 
-Object Orianted programming (OOP)
+## Object Orianted programming (OOP)
 
 ```java
 public class WeekOne {
