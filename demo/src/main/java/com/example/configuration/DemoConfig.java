@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class DemoConfig {
     @Scope
-    @Bean
+    //@Bean
     public Scanner inScanner(){
         return new Scanner(System.in);
     }
