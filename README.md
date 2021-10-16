@@ -49,13 +49,13 @@
 ** LocalDate, LocalTime, LocalDateTime, Duration 
 ** DateTimeFormatter 
 * Object Oriented Programming 
-** Class, Object 
-** Constructors 
-** How objects are created 
-** New, this keywords 
-** Object vs primitive 
-** Pass by value or pass by reference 
-** Garbage collector 
+ Class, Object  
+ Constructors   
+ How objects are created   
+ New, this keywords   
+ Object vs primitive   
+ Pass by value or pass by reference   
+ Garbage collector   
 * Encapsulation, Inheritance, Polymorphism 
 ** Abstract class 
 ** Interface and default methods 
