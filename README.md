@@ -45,10 +45,10 @@
 * Loops and Decision Mechanisms 
 * Number & String 
 * Array and Matrix Definitions 
-* Date and Time API
+* Date and Time API  
  LocalDate, LocalTime, LocalDateTime, Duration   
  DateTimeFormatter   
-* Object Oriented Programming 
+* Object Oriented Programming  
  Class, Object  
  Constructors   
  How objects are created   
@@ -56,13 +56,13 @@
  Object vs primitive   
  Pass by value or pass by reference   
  Garbage collector   
-* Encapsulation, Inheritance, Polymorphism 
+* Encapsulation, Inheritance, Polymorphism   
  Abstract class   
  Interface and default methods   
  Method overloading, overriding   
  Final keyword   
  Object class   
  Multiple inheritance in JAVA 
-* Optional 
+* Optional   
  An alternative for null 
 
