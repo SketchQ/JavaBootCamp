@@ -3,15 +3,15 @@
 
 **Java Bootcamp Müfredatı** 
 ## 1. Hafta 
-● Java Properties 
-● Data types and Operators 
-● Loops and Decision Mechanisms 
-● Number & String 
-● Array and Matrix Definitions 
-● Date and Time API 
-● Object Oriented Programming 
-● Encapsulation, Inheritance, Polymorphism 
-● Optional 
+* Java Properties 
+* Data types and Operators 
+* Loops and Decision Mechanisms 
+* Number & String 
+* Array and Matrix Definitions 
+* Date and Time API 
+* Object Oriented Programming 
+* Encapsulation, Inheritance, Polymorphism 
+* Optional 
 ## 2. Hafta 
 ● Generics 
 ● Collections 
