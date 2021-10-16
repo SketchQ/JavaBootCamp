@@ -92,11 +92,11 @@
   * What is stream API 
   * Stream pipeline 
   * Stream operations 
-   * Iterating 
-   * Filtering 
-   * Mapping 
-   * Matching 
-   * Reduction 
+    - Iterating 
+    - Filtering 
+    - Mapping 
+    - Matching 
+    - Reduction 
 * Exception Handling 
   * Exception hierarchy 
   * Try, catch, finally keywords 
