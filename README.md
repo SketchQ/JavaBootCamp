@@ -67,59 +67,58 @@
   * An alternative for null
 ### 2. Hafta 
 * Generics 
- * Fundamentals of Generics 
- * Multi typed class 
- * Bounded generic class
- * Wildcard argument 
- * Generic Class, method, interface 
- * Restrictions with generics 
+  * Fundamentals of Generics 
+  * Multi typed class 
+  * Bounded generic class
+  * Wildcard argument 
+  * Generic Class, method, interface 
+  * Restrictions with generics 
 * Collections API 
- * Collection interface 
- * Iterator 
- * Collections hierarchy 
- * List 
- * Set 
- * Queue 
- * Map 
- * Comparable vs Comparator 
+  * Collection interface 
+  * Iterator 
+  * Collections hierarchy 
+  * List 
+  * Set 
+  * Queue 
+  * Map 
+  * Comparable vs Comparator 
 * Lambda Expressions ve Method referans 
- * Introduction to lambda 
- * Functional interfaces 
- * Passing lambda expression as a method argument 
- * Method references 
- * Predefined functional interfaces 
+  * Introduction to lambda 
+  * Functional interfaces 
+  * Passing lambda expression as a method argument 
+  * Method references 
+  * Predefined functional interfaces 
 * Stream API 
- * What is stream API 
- * Stream pipeline 
- * Stream operations 
-  * Iterating 
-  * Filtering 
-  * Mapping 
-  * Matching 
-  * Reduction 
+  * What is stream API 
+  * Stream pipeline 
+  * Stream operations 
+   * Iterating 
+   * Filtering 
+   * Mapping 
+   * Matching 
+   * Reduction 
 * Exception Handling 
- * Exception hierarchy 
- * Try, catch, finally keywords 
- * Multiple catch blocks 
- * Nested try blocks 
- * Throw, throws keywords 
+  * Exception hierarchy 
+  * Try, catch, finally keywords 
+  * Multiple catch blocks 
+  * Nested try blocks 
+  * Throw, throws keywords 
 * Multithreading 
- * Creating a thread 
- * Thread prioritisation 
- * Synchronization 
- * Thread communication 
- * Thread local 
- * Concurrency API 
- * Thread pool and ExecutorService 
+  * Creating a thread 
+  * Thread prioritisation 
+  * Synchronization 
+  * Thread communication 
+  * Thread local 
+  * Concurrency API 
+  * Thread pool and ExecutorService 
 * Parallel streams 
- * Extension of stream api 
+  * Extension of stream api 
 * Annotations 
- * What is an annotation 
- * How to create and read an annotation 
+  * What is an annotation 
+  * How to create and read an annotation 
 * SOLID principles
- * Single responsibility principle 
- * Open-close principle 
- * Liskov substitution principle 
- * Interface segregation principle 
- * Dependency injection principle 
-
+  * Single responsibility principle 
+  * Open-close principle 
+  * Liskov substitution principle 
+  * Interface segregation principle 
+  * Dependency injection principle 
