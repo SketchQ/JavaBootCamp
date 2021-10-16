@@ -1,14 +1,39 @@
 # JavaBootCamp
-İzmir Java Bootcamp
+**İzmir Java Bootcamp**
 
-#1. Hafta Örnekleri
-
-### Sıralama
-
-1. Datatype (`MainDatatypes`)
-2. Decision Mechanism (`MainIf`)
-3. Loops (`MainLoops`)
-4. Strings (`MainString`)
-5. Date (`MainDate`)
-6. Methods (`MainMethod`)
-7. OOP
+**Java Bootcamp Müfredatı** 
+## 1. Hafta 
+● Java Properties 
+● Data types and Operators 
+● Loops and Decision Mechanisms 
+● Number & String 
+● Array and Matrix Definitions 
+● Date and Time API 
+● Object Oriented Programming 
+● Encapsulation, Inheritance, Polymorphism 
+● Optional 
+## 2. Hafta 
+● Generics 
+● Collections 
+● Lambda Expressions ve Method referans 
+● Stream API 
+● Exception Handling 
+● Multithreading 
+● Parallel streams 
+● Annotations 
+● SOLID principles 
+## 3. Hafta 
+● Spring framework 
+● Spring Boot 
+● Pair Programming 
+● Design Pattern 
+## 4. Hafta 
+● What is an API and API Design practices 
+● Building a RESTFUL web service 
+● Accessing to data: JDBC, JPA
+● Spring data JPA 
+● Unit testing 
+5. Hafta 
+● Consuming a RESTFUL web service 
+● Microservice pattern 
+● Clean Code 
