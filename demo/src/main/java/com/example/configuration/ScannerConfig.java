@@ -2,15 +2,17 @@ package com.example.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.Primary;
+
 
 import java.util.Scanner;
 
 @Configuration
 
-public class DemoConfig {
-    @Scope
-    //@Bean
+public class ScannerConfig {
+    
+    @Bean
+    @Primary
     public Scanner inScanner(){
         return new Scanner(System.in);
     }

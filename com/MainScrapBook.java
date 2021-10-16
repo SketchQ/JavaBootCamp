@@ -16,6 +16,5 @@ public class MainScrapBook {
       List<String> list = Arrays.asList(arr);
       Stream<String> stream = list.stream().filter(it -> it.contains("c"));
       stream.forEach(System.out::println);
-      
     }
 }

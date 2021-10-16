@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class InputService {
-    private Scanner scanner;
+    private final Scanner scanner;
 
-    public InputService(Scanner scanner){
-        this.scanner = scanner;
+    public InputService(Scanner inScanner){
+        this.scanner = inScanner;
     }
 
     public void testInput(){

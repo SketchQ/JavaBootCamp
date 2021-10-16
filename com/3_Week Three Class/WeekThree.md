@@ -159,4 +159,8 @@ public class MainStreamThread {
 
 ## Annotations
 
-## Springs
+## Spring FrameWork
+
+## SOLID
+
+[SOLID](https://gokhana.medium.com/solid-nedir-solid-yaz%C4%B1l%C4%B1m-prensipleri-nelerdir-40fb9450408e)
