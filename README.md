@@ -66,14 +66,14 @@
 * Optional
   * An alternative for null
 ### 2. Hafta 
-● Generics 
+* Generics 
  ○ Fundamentals of Generics 
  ○ Multi typed class 
  ○ Bounded generic class
  ○ Wildcard argument 
  ○ Generic Class, method, interface 
  ○ Restrictions with generics 
-● Collections API 
+* Collections API 
  ○ Collection interface 
  ○ Iterator 
  ○ Collections hierarchy 
@@ -82,13 +82,13 @@
  ○ Queue 
  ○ Map 
  ○ Comparable vs Comparator 
-● Lambda Expressions ve Method referans 
+* Lambda Expressions ve Method referans 
  ○ Introduction to lambda 
  ○ Functional interfaces 
  ○ Passing lambda expression as a method argument 
  ○ Method references 
  ○ Predefined functional interfaces 
-● Stream API 
+* Stream API 
  ○ What is stream API 
  ○ Stream pipeline 
  ○ Stream operations 
@@ -97,13 +97,13 @@
   ■ Mapping 
   ■ Matching 
   ■ Reduction 
-● Exception Handling 
+* Exception Handling 
  ○ Exception hierarchy 
  ○ Try, catch, finally keywords 
  ○ Multiple catch blocks 
  ○ Nested try blocks 
  ○ Throw, throws keywords 
-● Multithreading 
+* Multithreading 
  ○ Creating a thread 
  ○ Thread prioritisation 
  ○ Synchronization 
@@ -111,12 +111,12 @@
  ○ Thread local 
  ○ Concurrency API 
  ○ Thread pool and ExecutorService 
-● Parallel streams 
- ○Extension of stream api 
-● Annotations 
+* Parallel streams 
+ ○ Extension of stream api 
+* Annotations 
  ○ What is an annotation 
  ○ How to create and read an annotation 
-● SOLID principles
+* SOLID principles
  ○ Single responsibility principle 
  ○ Open-close principle 
  ○ Liskov substitution principle 
