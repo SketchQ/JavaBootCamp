@@ -37,3 +37,32 @@
 * Consuming a RESTFUL web service 
 * Microservice pattern 
 * Clean Code 
+
+## Detaylı içerik: 
+### 1. Hafta 
+* Java Properties 
+* Data types and Operators 
+* Loops and Decision Mechanisms 
+* Number & String 
+* Array and Matrix Definitions 
+* Date and Time API 
+** LocalDate, LocalTime, LocalDateTime, Duration 
+** DateTimeFormatter 
+* Object Oriented Programming 
+** Class, Object 
+** Constructors 
+** How objects are created 
+** New, this keywords 
+** Object vs primitive 
+** Pass by value or pass by reference 
+** Garbage collector 
+* Encapsulation, Inheritance, Polymorphism 
+** Abstract class 
+** Interface and default methods 
+** Method overloading, overriding 
+** Final keyword 
+** Object class 
+** Multiple inheritance in JAVA 
+* Optional 
+** An alternative for null 
+
