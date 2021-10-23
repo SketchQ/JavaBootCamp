@@ -48,7 +48,6 @@ public class Demo implements CommandLineRunner{
             int option = Integer.parseInt(scanner.nextLine());
 
             if(option == 0){
-                System.out.println("Burası çalıştı");
                 break;
             }
 
