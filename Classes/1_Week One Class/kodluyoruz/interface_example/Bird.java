@@ -1,4 +1,4 @@
-package com.kodluyoruz.interface_example;
+package Classes.kodluyoruz.interface_example;
 
 public abstract class Bird {
     private String name;
