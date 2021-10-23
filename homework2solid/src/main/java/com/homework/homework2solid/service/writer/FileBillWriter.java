@@ -18,14 +18,14 @@ public class FileBillWriter implements BillWriter {
     }
 
     @Override
-    public void printBill(Bill bill) {
-        bill.getBillItems().stream()
-                    .map(BillItem -> 
-                                BillItem.getProductName() + "\t" +
-                                BillItem.getSellerName() + "\t" +
-                                BillItem.getQuantity() + "\t" +
-                                BillItem.getPrice() + "\t" +
-                                BillItem.getDiscountedprice()
+    public void printBill(Bill bill){
+
+        bill.getBillItems().stream() .map(billItem -> 
+                                billItem.getProductName() + "\t" +
+                                billItem.getSellerName() + "\t" +
+                                billItem.getQuantity() + "\t" +
+                                billItem.getPrice() + "\t" +
+                                billItem.getDiscountedprice()
                     ).collect(Collectors.toList());
                     
         bill.getTotalPrice();

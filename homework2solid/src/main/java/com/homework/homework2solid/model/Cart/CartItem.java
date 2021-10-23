@@ -16,6 +16,9 @@ public class CartItem {
     private Discount discount;
 
     public double getPrice(){
+        return product.getPrice() * quantity;
+    }
+    public double getDiscountedPrice(){
         if(discount != null){
             return discount.applyDiscount(this);
         }
