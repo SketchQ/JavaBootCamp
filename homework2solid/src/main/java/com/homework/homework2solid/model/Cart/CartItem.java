@@ -4,9 +4,11 @@ import com.homework.homework2solid.model.Product;
 import com.homework.homework2solid.model.Seller;
 import com.homework.homework2solid.service.discount.Discount;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class CartItem {
     private Product product;
     private int quantity;

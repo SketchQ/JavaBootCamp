@@ -70,13 +70,13 @@ public class Demo implements CommandLineRunner{
                     .build();
 
             if(discountAmount != 0 && isBuy2Take3Applied){
-                throw new IllegalArgumentException(""); // TODO: 10.10.2021 Mesajı düzenle
+                throw new IllegalArgumentException(""); 
             }
 
             Discount discount = null;
             if(isBuy2Take3Applied){
                 discount = new Buy2Take3Discount();
-            }else if(discount != 0){
+            }else if(discountAmount != 0){
                 discount = new PercentageDiscount(discountAmount);
             }
 
