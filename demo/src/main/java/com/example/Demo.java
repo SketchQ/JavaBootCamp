@@ -1,12 +1,9 @@
 package com.example;
 
 import java.util.List;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 import com.example.service.DiscountService;
-import com.example.service.InputService;
-
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -22,8 +19,7 @@ import lombok.RequiredArgsConstructor;
  @Component
  @RequiredArgsConstructor
 public class Demo implements CommandLineRunner {
-    private final Scanner scanner;
-    private final InputService service;
+    //private final Scanner scanner;
     private final List<DiscountService> discountServices;
 
     @Override
@@ -40,11 +36,11 @@ public class Demo implements CommandLineRunner {
         discountServices.forEach(DiscountService::discount);
 
     }
-    
+    /*
     private void inputTaker(){
         System.out.println("Input 2: " );
         String input = scanner.nextLine();
         System.out.println("Input 2: " + input);
     }
-    
+    */
 }
