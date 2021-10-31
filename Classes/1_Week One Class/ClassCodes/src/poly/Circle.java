@@ -19,7 +19,8 @@ public class Circle extends GeometricObject {
         this.radius = radius;
     }
 
-    // Override satırı okunabilinirliği artırır.    
+    // Override satırı okunabilinirliği artırır.
+    // Birebir aynı referans ile alt sınıfta yazarsak Override olur.    
 	@Override
 	public double findArea() {
 		return this.radius * this.radius * Math.PI;

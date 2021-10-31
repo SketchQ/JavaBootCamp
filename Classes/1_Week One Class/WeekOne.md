@@ -930,3 +930,62 @@ public class Circle extends GeometricObject {
     }
 }
 ```
+
+Eğer bir sınıf inherit olarak başka bir sınıfı alıyorsa, o sınıfı inherit aldığı sınıf ile aynı metotta kullanabiliriz.
+(Metot signature de belirtilmesi gerekir!!)
+
+```java
+    // 2 adet geometricObject kullanarak metotu çalıştırdık
+        
+        System.out.println(equalArea(geo, geo2));
+        
+        // 1 adet circle 1 adet geometricObject kullanarak da çalıştırabiliriz.
+        // Circle inherits geometricObject
+
+        Circle circle = new Circle(5, "white", false);
+        System.out.println(equalArea(geo, circle));
+
+    }
+    // Alan karşılaştırma metotu
+    private static boolean equalArea(GeometricObject geo1, GeometricObject geo2){
+        return geo1.findArea() == geo2.findArea();
+    }
+```
+
+Instanceof Keyword
+
+```java
+  private static void print(GeometricObject geo){
+        System.out.println();
+        System.out.println(geo.toString());
+        System.out.println("The Area is " + geo.findArea());
+        System.out.println("The perimeter is " + geo.findPerimeter());
+        // instanceof keywordu ile eğer girilen sınıf silindir ise hacminide gösterebiliriz.
+        if(geo instanceof Cyclinder){
+            System.out.println("The Volume is " + ((Cyclinder)geo).findVolume());
+        }
+```
+
+Yukarıdaki metotu çağıralım.
+
+```java
+ // Circle
+        print(geo);
+        // Cyclinder
+        print(geo3);
+```
+
+Çıktısı :
+
+```txt
+poly.Circle@2a139a55
+The Area is 78.53981633974483
+The perimeter is 31.41592653589793
+
+poly.Cyclinder@15db9742
+The Area is 78.53981633974483
+The perimeter is 31.41592653589793
+The Volume is 157.07963267948966
+```
+
+## Interface
