@@ -989,3 +989,93 @@ The Volume is 157.07963267948966
 ```
 
 ## Interface
+
+Abstract class ile tam classın arasını doldurur.
+Mesela kuş sınıfı oluşturalım.
+
+```java
+public abstract class Bird {
+    private String name;
+    private int age;
+
+    //Constructor
+    public Bird(String name,int age){
+        this.name = name;
+        this.age = age;
+    }
+
+    // getter and setters
+
+    public String getName(){
+        return this.name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public int getAge(){
+        return this.age;
+    }
+
+    public void setAge(int age){
+        this.age = age;
+    }
+}
+```
+
+Her kuş uçamaz ancak subclasslara bu özelliği eklememiz gerekebilir.
+Burada bir önceki konuda gördüğümüz gibi abstract metot yazarsak her subclassa bu metotu eklememiz gerekir.
+Bunun yerine CanFly adında bir interface oluşturup, uçabilen subclasslara bu özelliğie(metotu) ekleyebiliriz.
+
+CanFly interface'i
+
+```java
+// abstract metotlar yazmamızı sağlar, Interfacedeki her metot abstracttır.
+public interface canFly {
+    void fly();
+}
+
+```
+
+Oluşturduğumuz Parrot classına yukardaki interface'i ekleyelim.
+"implements" keywordune dikkat
+
+```java
+public class Parrot extends Bird implements canFly{
+    // nitelik
+    
+
+    // constructor
+    public Parrot(String name, int age) {
+        super(name, age);
+        //TODO Auto-generated constructor stub
+    }
+
+    @Override
+    public void fly() {
+        System.out.println(this.getName() + "\t:" + "Uçabiliyorum.");
+        
+    }
+
+}
+
+```
+
+Uçamayan bir subclass oluşturalım
+
+```java
+public class Penguin extends Bird{
+    // nitelik
+
+    // Constructor
+    public Penguin(String name, int age) {
+        super(name, age);
+        //TODO Auto-generated constructor stub
+    }
+    
+}
+```
+
+Görüldüğü gibi interface eklemedik ve abstract metot herhangi bir hata vermedi.
+
+## Static keyword
