@@ -1156,3 +1156,43 @@ Yukarıdaki metotu çağırmak için illa nesne oluşturmamıza gerek yok.(çün
 ```
 
 ## Reference
+
+Call by Value
+
+```java
+  public static void main(String[] args) {
+       int n1 = 5;
+       int n2 = 3;
+
+
+       // Değerler değişmedi
+       swap(n1, n2);
+       System.out.println(n1);
+       System.out.println(n2); 
+  }   
+           
+    public static void swap(int n1,int n2){
+        int temp = n1;
+        n1 = n2;
+        n2 = temp;
+    }
+}
+```
+
+Call by Referance
+
+```java
+    // Matematical nesne oluşturma
+       // Bu şekilde swap metotu çalıştı
+       // Call by Referance
+       Matematical m1 = new Matematical( 5, 3);
+       swap(m1);
+       System.out.println(m1.n1);
+       System.out.println(m1.n2);
+
+    public static void swap(Matematical m1){
+        int temp = m1.n1;
+        m1.n1 = m1.n2;
+        m1.n2 = temp;
+    }
+```
