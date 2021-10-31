@@ -744,3 +744,189 @@ System.out.println(cyclinder.findVolume());
 ```
 
 * Polymorphism
+
+Soyut kavram olduğunu belirtmek için "abstract" keyword kullanılır.
+"Abstract" sınıflardan obje çağırılamaz. Constructor kullanılsa bile.
+Bu sınıf diğer sınıflara inherit etmesi için oluşturuluyor.
+
+Abstract Sınıf örneği (GeometricObject)
+
+```java
+public abstract class GeometricObject { 
+    private String color;
+    private boolean filled;
+
+
+    public GeometricObject(String color, boolean filled){
+        this.color = color;
+        this.filled = filled;
+    }
+    public GeometricObject(){
+
+    }
+    // Getter ve Setter metotlar basit bir sınıf oluşturmamızı sağlar.
+    public String getColor(){
+        return this.color;
+    }
+
+    public void setColor(String color){
+        this.color = color;
+    }
+
+    public boolean isFilled(){
+        return this.filled;
+    }
+
+    public void setFilled(boolean filled){
+        this.filled = filled;
+    }
+    
+}
+```
+
+Yukardaki sınıf kağıt üzerinde doğru olsa bile bu sınıfı kullanarak nesne oluşturamayız.
+
+```java
+public class TestPolymorphism {
+    public static void main(String[] args) {
+        // Bu Kısım Hata Verir.
+        GeometricObject geo = new GeometricObject() {
+             
+        };
+            
+        
+    }
+}
+```
+
+Bunun yerine yeni bir Circle sınıfı oluşturalım. Bu yeni sınıf abstract sınıfının color ve filled niteliklerini alsın
+
+```java
+
+public class Circle extends GeometricObject {
+    // Nitelikler
+    double radius;
+    
+    // Circle Constructor
+    public Circle(double radius,String color,boolean filled){
+        super(color,filled);
+        this.radius = radius;
+    }
+}
+```
+
+Yeni bir GeometricObject nesnesi oluşturmak için ise Circle sınıfını kullanmamız gerekir.
+
+```java
+public class TestPolymorphism {
+    public static void main(String[] args) {
+        // Circle sınıfı GeometricObject abstract sınıfından color ve filled nitelikleri aldı.
+        // Kendisi de radius niteliğini ekledi.
+        // GeometricObject sınıfında bulunan get... metotu kullanıldı ve ekrana circle'ın rengi yazıldı.
+       GeometricObject geo = new Circle(5, "Red", true);
+        System.out.println(geo.getColor());
+    }
+}
+
+```
+
+Rectange adında bir sınıf oluşturalım ve bu sınıftan GeometricObject sınıfına ait bir nesne oluşturalım.
+
+```java
+public class Rectangle extends GeometricObject {
+    
+    // Nitelikler
+    private double width;
+    private double height;
+
+
+    // Constructor
+    public Rectangle(String color, boolean filled, double width, double height) {
+        super(color, filled);
+        this.height = height;
+        this.width = width;
+    }
+
+    // Getters and Setters
+
+    public double getWidht(){
+        return this.width;
+    }
+    public void setWidth(double width){
+        this.width = width;
+    }
+
+    public double getHeight(){
+        return this.height;
+    }
+
+    public void setHeight(double height){
+        this.height = height;
+    }
+
+}
+```
+
+```java
+public class TestPolymorphism {
+    public static void main(String[] args) {
+        // Rectangle
+        GeometricObject geo2 = new Rectangle("White", false, 30, 10);
+        System.out.println(geo2.getColor());
+    }
+}
+```
+
+* Abstract Metotlar
+
+Abstract sınıfının içerisine abstract metot yazabiliriz.
+Bu metotları o abstract sınıfını kullanan sınıflara ait nesneler kullanabilir.
+
+```java
+    // Abstract Metotlar
+    // Abstract Metotlar zorunlu olarak override edilmesi gerekir.
+    // bu metotu kullanabilmek için yazılan bu metotun bu abstract sınıfını inherit eden
+    // diğer sınıflarda olmaası gerekmektedir.
+
+    // Çevre
+    public abstract double findArea();
+
+    // Alan
+    public abstract double findPerimeter();
+    
+```
+
+Bu metotların Override metotları bahsi geçen sınıflarda olmak zorunda!
+
+```java
+public class Circle extends GeometricObject {
+    // Nitelikler
+    double radius;
+    
+    // Circle Constructor
+    public Circle(double radius,String color,boolean filled){
+        super(color,filled);
+        this.radius = radius;
+    }
+
+    // getter and Setter
+    public double getRadius(){
+        return this.radius;
+    }
+
+    public void setRadius(double radius){
+        this.radius = radius;
+    }
+
+    // Override satırı okunabilinirliği artırır.    
+    @Override
+    public double findArea() {
+    return this.radius * this.radius * Math.PI;
+    }
+
+    @Override
+    public double findPerimeter() {
+        return 2 * this.radius * Math.PI;
+    }
+}
+```
