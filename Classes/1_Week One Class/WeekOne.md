@@ -1145,7 +1145,7 @@ public class MathmeticalOperations {
 Yukarıdaki metotu çağırmak için illa nesne oluşturmamıza gerek yok.(çünkü static)
 
 ```java
-    // Mathmetical operations ve static
+        // Mathmetical operations ve static
         // metot static olduğu için nesne oluşturmaya gerek yok.
         //Aşağıdaki metot doğru değil!.
         MathmeticalOperations m1 =  new MathmeticalOperations();
