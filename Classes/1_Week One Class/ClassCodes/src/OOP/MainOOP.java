@@ -15,6 +15,9 @@ public class MainOOP {
 
         Circle circle = new Circle(); //default constructor
         System.out.println(circle.findArea());
+        Circle c1 = new Circle(5.0);
+        System.out.println(c1.findArea());
+        System.out.println("====================");
 
         /* OOP Konseptleri
          *
@@ -25,6 +28,7 @@ public class MainOOP {
          *
          * Inheritence (Miras): Yeni sınıf yaratırken var olan sınıfın özelliklerini alabilmeyi sağlayan özellik.
          * Örneğin Köpek sınıfı yazarken Hayvanlar sınıfını miras alabiliriz oradaki özellikler köpekte de olacaktır.
+         * 
          * Bir sınıf sadece bir sınıfı extend edebilir.
          *
          * Polymorphism (Çok biçimlilik): Programın içinde bir sınıfı nitelerken onu niteleyebilecek başka bir sınıf
@@ -35,6 +39,7 @@ public class MainOOP {
 
         /* Abstraction Dice */
         Dice dice = new Dice();
+        // roll() metotunun nasıl çalıştığını bilmiyoruz "Abstraction örneği"
         dice.roll();
 
 //        dice.faceValue = 7;
