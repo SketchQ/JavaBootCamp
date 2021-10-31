@@ -1,8 +1,8 @@
-package com.kodluyoruz.oop;
+package OOP;
 
 public class MainOOP {
     public static void main(String[] args) {
-        /* OOP
+       /* OOP
          * Gerçek hayattaki nesneleri programa aktarmak için kullanabileceğimiz özellik
          * Örneğin matematikte bulunan daireyi koda aktarmak istersek;
          *  Dairenin onu niteleyen bir yarı çapı vardır
@@ -47,6 +47,5 @@ public class MainOOP {
 
         Cyclinder cyclinder = new Cyclinder(1);
         System.out.println(cyclinder.findVolume());
-
     }
 }
