@@ -7,7 +7,6 @@ public class Parrot extends Bird implements canFly{
     // constructor
     public Parrot(String name, int age) {
         super(name, age);
-        //TODO Auto-generated constructor stub
     }
 
     @Override

@@ -6,7 +6,6 @@ public class Penguin extends Bird{
     // Constructor
     public Penguin(String name, int age) {
         super(name, age);
-        //TODO Auto-generated constructor stub
     }
     
 }

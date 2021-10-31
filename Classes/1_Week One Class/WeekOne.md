@@ -1079,3 +1079,80 @@ public class Penguin extends Bird{
 Görüldüğü gibi interface eklemedik ve abstract metot herhangi bir hata vermedi.
 
 ## Static keyword
+
+Static keywordu ile bir sınıftaki metotlar bütün nesnelere uygulanır.
+Circle Sınıfı oluşturalım
+
+```java
+public class Circle {
+    // Nitelikler
+    private double radius;
+    private static int count;
+
+    // Constructor
+    // count her nesne üretiminde artar. Bütün subclasslar içinde artar.
+    public Circle(double radius){
+        this.radius = radius;
+        count++;
+    }
+
+    // Getters
+    public double getRadius(){
+        return this.radius;
+    }
+    // Static demek bütün nesnelerimizde çalışıyor demek
+    // With static
+    public static int getCount(){
+        return count;
+    }
+    // without static
+    public int getCount1(){
+        return count;
+    }
+}
+```
+
+İçerisindeki getCount() static metodunu çalıştırmak için direk sınıf ismini kullanmamız gerekir.
+
+```java
+        Circle circle = new Circle(1);
+        System.out.println(circle.getCount1());
+        // Aşağıdaki Sınıf, nesne değil
+        System.out.println(Circle.getCount());
+        System.out.println("==============");
+        Circle c2 = new Circle(1);
+        System.out.println(c2.getCount1());
+        System.out.println( "Circle 1 Count \t:" + circle.getCount1());
+        // Aynı şekilde bu bir sınıf
+        System.out.println(Circle.getCount());
+        System.out.println("===============");
+```
+
+Matematiksel işlemler için static kelimesi
+
+```java
+public class MathmeticalOperations {
+    
+    
+    // static keyword nesne oluşturmaya gerek kalmadan bu metotu kullanmamızı sağlar.
+    public static int addition(int n1,int n2){
+      return n1 + n2;  
+    }
+
+}
+```
+
+Yukarıdaki metotu çağırmak için illa nesne oluşturmamıza gerek yok.(çünkü static)
+
+```java
+    // Mathmetical operations ve static
+        // metot static olduğu için nesne oluşturmaya gerek yok.
+        //Aşağıdaki metot doğru değil!.
+        MathmeticalOperations m1 =  new MathmeticalOperations();
+        System.out.println(m1.addition(5, 2));
+        
+        // daha Doğrusu
+        System.out.println(MathmeticalOperations.addition(5, 2));
+```
+
+## Reference
