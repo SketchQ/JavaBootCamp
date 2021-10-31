@@ -4,9 +4,6 @@ import java.util.Random;
 
 public class Dice {
     private int faceValue;
-    private String name;
-    private String surname;
-
     public int roll() {
         Random random = new Random();
         faceValue = random.nextInt(6) + 1; // 0 - 5 + 1 1 -6
