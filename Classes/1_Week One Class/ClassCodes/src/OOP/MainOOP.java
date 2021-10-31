@@ -38,19 +38,46 @@ public class MainOOP {
          */
 
         /* Abstraction Dice */
+        
         Dice dice = new Dice();
         // roll() metotunun nasıl çalıştığını bilmiyoruz "Abstraction örneği"
         dice.roll();
 
-//        dice.faceValue = 7;
+        
+        // Encapsulation
+        
+        // public int faceValue; olduğu için buradan faceValue'yü değiştirebilirim.
+        // dice.faceValue = 7;
+        // Private int faceValue; olduğu zaman ulaşılmaz ve hata verir.
         System.out.println(dice.getFaceValue());
+        System.out.println("==================");
+        
+        
+        // zar değerine 5 veriyoruz
+        dice.setFaceValue(5);
+        System.out.println(dice.getFaceValue());
+        
+        
+        // zar değerine 6 dan büyük bir değer veriyoruz
+        // dice.setFaceValue(9); // bu satır hata verir.
+        //System.out.println(dice.getFaceValue()); // bu satırı alamayız.
+
+        System.out.println(dice.getFirstName());
+        System.out.println("===============");
+
 
         /* Inheritence
+        
          * Silindir tabanları eşit iki daireden meydana gelen bir geometrik şekildir o zaman daire den yazdığımız
          * özellikleri miras alabilir
          */
-
+        // Birim Silindir, yüksekliği 1 , yarıçap circle sınıfından geliyor.    
         Cyclinder cyclinder = new Cyclinder(1);
         System.out.println(cyclinder.findVolume());
+        System.out.println("==============");
+        // Silindirin yarıçapını ve yüksekliğini de biz belirtiyoruz.
+        Cyclinder cyclinder2 = new Cyclinder(5, 5);
+        System.out.println(cyclinder2.findVolume());
+
     }
 }

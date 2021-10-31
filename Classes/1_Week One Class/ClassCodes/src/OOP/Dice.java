@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class Dice {
     private int faceValue;
+    private String name = "Test";
+    private String surname = "Test";
 
 
     public int roll() {
@@ -13,10 +15,12 @@ public class Dice {
         return this.faceValue;
     }
 
+    // Encapsulation => faceValue değeri okunur ancak değiştirelemez. (get) keyword
     public int getFaceValue() {
         return this.faceValue;
     }
-
+    // Encapsulation => (set) keyword. Aşağıdaki metot ile facevalue'ye değer verilebilir
+    // ancak kuralları biz belirleriz. Yani faceValue = 7 olamaz
     public void setFaceValue(int faceValue){
         if(faceValue >= 1 && faceValue <= 6){
             this.faceValue = faceValue;
@@ -25,4 +29,7 @@ public class Dice {
         }
     }
   
+    public String getFirstName(){
+        return this.name + " " + this.surname;
+    }
 }
